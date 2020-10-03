@@ -1,3 +1,38 @@
-a {
-  dislay: block;
+* {
+   background-color: beige;
+   text-align: center;
+}
+
+html {
+   border: dashed;
+   margin: 10px;
+   padding-bottom: 600px;
+}
+
+::-webkit-scrollbar{
+   display: none;
+}
+
+h2 {
+   color: #660505;
+   font-size: 2.5em;
+}
+
+a:link {
+  color: #5e1dcd;
+  display: block;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+a:visited {
+  color: #2c50df;
+}
+
+a:hover {
+  color: #78d92e;
+}
+
+a:active {
+  color: #bd1920;
 }
