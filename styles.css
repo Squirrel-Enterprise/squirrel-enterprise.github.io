@@ -123,3 +123,21 @@ a:hover:after {
    width: 100%;
    left: 0;
 }
+
+/* Large link hover */
+.copyright a:after {
+   content: "";
+   display: block;
+   height: .8vh;
+   border-radius: 15px;
+   left: 50%;
+   position: absolute;
+   background: lightblue;
+   transition: all .5s;
+   width: 0;
+}
+
+.copyright a:hover:after {
+   width: 100%;
+   left: 0;
+}
