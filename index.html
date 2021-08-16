@@ -4,29 +4,83 @@
       <!-- Google Fonts -->
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
       <!-- Auto -->
       <meta charset="utf-8">
       <title>Squirrel Enterprise</title>
       <link rel="stylesheet" href="styles.css">
-      <script src="main.js" charset="utf-8"></script>
       <link rel="shortcut icon" href="arcade.svg" type="image/x-icon">
    </head>
    <body>
-      <div class="gold-rush">
-         <div class="gold-rush-item">
-            <h1>Gold Rush</h1>
+      <div id="landing">
+         <img class="logo" src="D:/Desktop/squirrel-plain.svg">
+         <img class="acorn" src="D:/Desktop/acorn.svg">
+         <div class="heading">
+            <span>S</span>
+            <span>q</span>
+            <span>u</span>
+            <span>i</span>
+            <span>r</span>
+            <span>r</span>
+            <span>e</span>
+            <span>l</span>
+            <br>
+            <span class="scnd-line">E</span>
+            <span>n</span>
+            <span>t</span>
+            <span>e</span>
+            <span>r</span>
+            <span>p</span>
+            <span>r</span>
+            <span>i</span>
+            <span>s</span>
+            <span>e</span>
          </div>
-         <div class="gold-rush-item"></div>
-         <div class="gold-rush-item">
-            <p>A simple-but-promising incremental game, made with JavaScript. This was my first game, and recently had a complete redo, with many new features which you will have to find out about yourself! You can play it <a href="https://squirrel-314.github.io">here</a>, or check out the GitHub repository <a href="https://github.com/Squirrel-314/squirrel-314.github.io">here</a>, and if you use Linux, you can download the 0.9 version app <a href="download-gold-rush.html">here</a>!</p>
-         </div>
-         <a href="https://squirrel-314.github.io/" target="_blank" class="no-link"><img src="Assets/Images/astroid.png" alt="Astroid" height="50%"></a>
+         <p onclick="window.location.href = '#explore'" class="explore">Explore</p>
+         <p onclick="window.location.href = '#expand'" class="expand">Expand</p>
+         <p onclick="window.location.href = '#encompass'" class="encompass">Encompass</p>
+         <p onclick="window.location.href = '#copyright'" class="copyright-link">More Information</p>
       </div>
-      <div class="copyright">
+      <div id="explore">
+         <p class="top" onclick="window.location = '#landing'">X</p>
+         <p>We are a well-established company <span class="material-icons-round">corporate_fare</span> and have made numerous products, such as websites <span class="material-icons-round">web_asset</span> and SVG images <span class="material-icons-round">image</span>. Here are some of our best.</p>
+         <p>
+            <a href="https://vegetable-dash.herokuapp.com/">Vegetable Dash</a><br>
+            <a href="https://squirrel-314.github.io/">Gold Rush</a><br>
+            Scent from Above<br>
+            <a href="icons.html">Weather Icons</a><br>
+            <a href="https://meetsquirrel.github.io/">Meet Squirrel</a><br>
+            <a href="https://squirrel-enterprise.github.io/">this site</a><br>
+            <a href="https://github.com/Squirrel-314/digit">digit.js</a><br>
+            <a href="https://schoolarlybay.github.io/">the Schoolarly Bay</a><br>
+            <a href="https://hillside-township.github.io/">Hillside Township</a><br>
+            <a href="https://pusheenmaster5.github.io/GreenhouseSite/">Greenhouse Company</a>
+         </p>
+      </div>
+      <div id="expand">
+         <p class="top" onclick="window.location = '#landing'">X</p>
+         <p>Site is still in progress!<span class="material-icons-round">construction</span></p>
+      </div>
+      <div id="encompass">
+         <p class="top" onclick="window.location = '#landing'">X</p>
+         <p>Our products and services include:</p>
+         Building Websites <span class="material-icons-round">web_asset</span> <span onclick="window.location = '#get-started'">&#8594;</span> <br>
+         SVG & PNG images & icons <span class="material-icons-round">image</span> <span onclick="window.location = '#get-started'">&#8594;</span> <br>
+         Pre-recorded Classes <span class="material-icons-round">school</span> <span onclick="window.location = '#get-started'">&#8594;</span> <br>
+         <button class="depth-btn blue-btn" onclick="window.location = '#get-started'">A call-to-action button!</button>
+         <button class="depth-btn blue-btn" onclick="window.location = '#get-started'">Annnnnnnnnd another one!</button>
+      </div>
+      <div id="copyright" class="copyright">
+         <p onclick="window.location = '#landing'">X</p>
          Check out the source code on <a href="https://github.com/Squirrel-Enterprise/squirrel-enterprise.github.io">Github</a>!<br><br>
-         Also check these out! <br>
-         <a href="https://hillside-township.github.io/">Hillside Township</a><br>
-         <a href="https://pusheenmaster5.github.io/GreenhouseSite/">Greenhouse Company</a>
+         <img src="computer.svg" style="height: 25vh; position: fixed;">
+         <div class="icon-wrap"><div>
+         </div></div>
+      </div>
+      <div id="get-started" class="copyright">
+         <p onclick="window.location = '#landing'">X</p>
+         Contact us at thehillsidetownship@gmail.com! <br>
+         As of now, our services are FREE, but all code will be on GitHub, all images here, and all classes on Learn with Squirrel (Yay <span title="Free and open source stuff">FOSS</span>!)
       </div>
    </body>
 </html>

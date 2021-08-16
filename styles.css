@@ -5,77 +5,159 @@ Main
 * {
    margin: 0;
    padding: 0;
+   font-size: 3.5vh;
+   font-family: "Nunito";
+   font-weight: 200;
+   color: #fff;
 }
 
 body {
+   overflow: hidden;
+}
+
+.top {
+   position: absolute;
+   top: 3vh;
+   right: 5vh;
+   font-weight: 900;
+   font-size: 9vh;
+   color: #ff0000;
+}
+
+/* Landing */
+
+#landing {
    background-color: #f5f5f5;
+   height: 100vh;
 }
 
-/*==========================================================
-Gold Rush
-==========================================================*/
-
-.gold-rush {
-   height: 211.5vh;
-   background-image: url("Assets/Images/mountian.png");
-   background-size: contain;
-   font-family: "Nunito";
-   color: #fff;
-   display: grid;
-   grid-template-columns: 33.333% 33.333% 33.333%;
+#landing .logo {
+   position: absolute;
+   top: 5vh;
+   left: 5vw;
+   height: 50vh;
 }
 
-.gold-rush-item:nth-child(3) {
-   padding-top: 80%;
+#landing .explore {
+   position: absolute;
+   top: 80vh;
+   left: 20vw;
+   color: #000;
+   font-size: 5vh;
 }
 
-.gold-rush-item h1 {
-   font-size: 15vh;
-   text-align: center;
-   text-shadow: 0 0 2px #262626;
-   padding: 5vh;
+#landing .expand {
+   position: absolute;
+   top: 80vh;
+   left: 40vw;
+   color: #000;
+   font-size: 5vh;
 }
 
-.gold-rush-item p {
-   text-align: center;
-   font-size: 4.5vh;
-   margin: 5vh;
+#landing .encompass {
+   position: absolute;
+   top: 80vh;
+   left: 60vw;
+   color: #000;
+   font-size: 5vh;
 }
 
-img {
-   position: fixed;
-   top: -30%;
-   right: 0;
-   animation: rotate 1s linear infinite;
-   animation-play-state: paused;
-   animation-delay: calc(var(--scroll) * -1s);
+#landing .copyright-link {
+   position: absolute;
+   bottom: .5vh;
+   left: .5vw;
+   color: #666;
+   font-size: 4vh;
 }
 
-@keyframes rotate {
-   1% {
-      top: -10%;
+#landing .explore:before, .expand:before, .encompass:before, .copyright-link:before {
+   content: "";
+   background-color: #08e3ed;
+   position: absolute;
+   bottom: -1vh;
+   height: 1vh;
+   width: 0;
+   animation: a .5s;
+}
+
+#landing .explore:hover:before, .expand:hover:before, .encompass:hover:before, .copyright-link:hover:before {
+   animation: b .5s forwards;
+}
+
+@keyframes a {
+   0% { left: 0; right: 0; width: 100%; }
+   100% { left: 100%; right: 0; width: 0; }
+}
+
+@keyframes b {
+   0% { left: 0; right: 100%; width: 0; }
+   100% { left: 0; right: 0; width: 100%; }
+}
+
+#landing .acorn {
+   position: absolute;
+   top: 20vh;
+   left: -10vw;
+   height: 20vh;
+   z-index: 100;
+   animation: jump-acorn 5s ease-out forwards;
+}
+
+#landing .heading {
+   position: absolute;
+   top: 5vh;
+   right: 15vw;
+}
+
+#landing .heading span {
+   font-size: 20vh;
+   color: #000;
+}
+
+#landing .heading .scnd-line {
+   margin-left: 10vw;
+}
+
+@keyframes jump-acorn {
+   0% {
+      top: 20vh;
+      left: -10vw;
    }
-   5% {
-      top: 0;
+   15% {
+      top: 60vh;
+      left: 20vw;
    }
-   25% {
-      right: 100%;
-      top: 0;
+   30% {
+      top: 40vh;
+      left: 30vw;
    }
-   65% {
-      opacity: 1;
-      top: 0;
-      right: 0;
+   45% {
+      top: 60vh;
+      left: 40vw;
    }
-   90% {
-      opacity: 1;
+   60% {
+      top: 50vh;
+      left: 50vw;
+   }
+   70% {
+      top: 60vh;
+      left: 60vw;
+      transform: rotate(0);
    }
    100% {
-      transform: rotate(1000deg);
-      opacity: 0;
-      top: 0;
-      right: -30%;
+      top: 60vh;
+      left: 80vw;
+      transform: rotate(20deg);
    }
+}
+
+/* Expore */
+
+#explore, #expand, #encompass {
+   position: relative;
+   background-color: #292929;
+   height: 100vh;
+   overflow: auto;
 }
 
 /*==========================================================
@@ -83,7 +165,7 @@ Copyright
 ==========================================================*/
 
 .copyright {
-   height: 100vh;
+   min-height: 100vh;
    width: 100%;
    padding: 15vh;
    color: #fff;
@@ -141,3 +223,68 @@ a:hover:after {
    width: 100%;
    left: 0;
 }
+
+.icon-wrap {
+   box-sizing: border-box;
+   display: inline-block;
+   width: 80px;
+   height: 80px;
+}
+.icon-wrap > div {
+   box-sizing: border-box;
+   position: absolute;
+   background-color: lightgray;
+   height: 50px;
+   width: 50px;
+   display: block;
+   border-radius: 4.2vh/4.2vh;
+   background: rgb(247, 247, 247);
+   background-image: url("arcade.svg");
+   background-size: contain;
+}
+
+.material-icons-round {
+   height: 4vh;
+   fill: #fff;
+   display: inline;
+}
+
+button {
+   padding: 4vh;
+   margin: 1vh;
+   font-family: sans-serif;
+   cursor: inherit;
+   transition: transform 150ms ease;
+}
+button:focus { outline: none; }
+button:active { transform: scale(0.99); }
+summary:focus { outline: none; }
+
+.depth-btn {
+   outline: none;
+   margin: 2vh;
+   padding: 8vh;
+   border: none;
+   border-radius: 5vh;
+   color: #fff;
+   font-size: 5vh;
+   transition: .15s;
+}
+.depth-btn:active {
+   outline: none;
+   transform: translateY(1vh);
+}
+
+.red-btn { background-color: #f74040; box-shadow: 0 2vh #d61818; }
+.orange-btn { background-color: #F9A748; box-shadow: 0 2vh #DA7D12; }
+.yellow-btn { background-color: #F8F948; box-shadow: 0 2vh #EAEB12; }
+.green-btn { background-color: #3FE863; box-shadow: 0 2vh #03B428; }
+.blue-btn { background-color: #63E1FF; box-shadow: 0 2vh #16CCF8; }
+.purple-btn { background-color: #6B3FE8; box-shadow: 0 2vh #4B20C8; }
+
+.red-btn:active { box-shadow: 0 1vh #d61818; }
+.orange-btn:active { box-shadow: 0 1vh #DA7D12; }
+.yellow-btn:active { box-shadow: 0 1vh #EAEB12; }
+.green-btn:active { box-shadow: 0 1vh #03B428; }
+.blue-btn:active { box-shadow: 0 1vh #16CCF8; }
+.purple-btn:active { box-shadow: 0 1vh #4B20C8; }
