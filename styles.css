@@ -15,6 +15,27 @@ body {
    overflow: hidden;
 }
 
+.center-text {
+   text-align: center;
+}
+
+.about-explore {
+   text-align: center;
+   margin: 1.5vh 15vw 2vh 15vw;
+   font-size: 5.5vh;
+   font-weight: 300;
+}
+
+.explore-link-grid {
+   display: grid;
+   grid-template-columns: 25% 25% 25% 25%;
+}
+
+.inline-svg {
+   height: 5vh;
+   margin-bottom: -1vh;
+}
+
 .top {
    position: absolute;
    top: 3vh;
@@ -100,6 +121,7 @@ body {
    left: -10vw;
    height: 20vh;
    z-index: 100;
+   pointer-events: none;
    animation: jump-acorn 5s ease-out forwards;
 }
 
@@ -122,6 +144,7 @@ body {
    0% {
       top: 20vh;
       left: -10vw;
+      pointer-events: none;
    }
    15% {
       top: 60vh;
@@ -143,11 +166,13 @@ body {
       top: 60vh;
       left: 60vw;
       transform: rotate(0);
+      pointer-events: none;
    }
    100% {
       top: 60vh;
       left: 80vw;
       transform: rotate(20deg);
+      pointer-events: auto;
    }
 }
 
@@ -169,11 +194,13 @@ Copyright
    width: 100%;
    padding: 15vh;
    color: #fff;
-   font-size: 10vh;
+   font-size: 9vh;
    box-sizing: border-box;
    font-family: "Nunito";
    text-align: center;
    background-color: #262626;
+   height: 100vh;
+   overflow: auto;
 }
 
 /*==========================================================
